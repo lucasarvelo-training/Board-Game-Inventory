@@ -1,12 +1,6 @@
 # Board Game Inventory
 > Keep an inventory of you board games collection.
 
-[![NPM Version][npm-image]][npm-url]
-[![Build Status][travis-image]][travis-url]
-[![Downloads Stats][npm-downloads]][npm-url]
-
-![](header.png)
-
 ## Installation
 Comming soon!!!
 
@@ -16,11 +10,11 @@ Comming soon!!!
 
 ## Meta
 
-Lucas Arvelo – [@lucasarvelo](https://twitter.com/dbader_org) – contact@lucasarvelo.com
+Lucas Arvelo – [@lucasarvelo](https://twitter.com/lucasarvelo) – contact@lucasarvelo.com
 
-Distributed under the XYZ license. See ``LICENSE`` for more information.
+Distributed under the MIT license. See ``LICENSE`` for more information.
 
-[https://github.com/lucasarvelo/github-link](https://github.com/dbader/)
+[https://github.com/lucasarvelo/](https://github.com/lucasarvelo/)
 
 ## Contributing
 
