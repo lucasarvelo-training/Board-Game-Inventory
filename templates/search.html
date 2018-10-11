@@ -1,0 +1,51 @@
+{% extends "layout.html" %}
+
+{% block head %}
+    <script src="static/search.js"></script>
+{% endblock %}
+
+{% block title %}
+    {% if session.user_id %}
+        Search
+    {% else %}
+        Board Game Inventory
+    {%endif%}
+{% endblock %}
+
+{% block main %}
+    {% if session.user_id %}
+    <div class="container-fluid">
+        <div class="row">
+            <form id="search_form">
+                <div class="form-group">
+                        <input type='text' class="form-control input-lg" id="search_input" placeholder="Boardgame Name or Id" data-toggle="popover"
+                        data-content="Please, use a Boardgame name or id">
+                </div>
+                <button type="button" class="bt btn-info btn-lg" id="search_btn">Search Boardgames</button>
+            </form>
+            <div class="justify-content-center">
+                    <table class="table table-striped invisible" id="search_table">
+                        <thead class="thead-dark">
+                            <tr>
+                                <th class="text-center" colspan="5"><h2>Search Results</h2></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th></th>
+                                <th>Id</th>
+                                <th>Name</th>
+                                <th>Year</th>
+                                <th>Rank</th>
+                            </tr>
+                        </tbody>
+                    </table>
+
+            </div>
+        </div>
+    </div>
+    {% else %}
+
+    {%endif%}
+
+{% endblock %}

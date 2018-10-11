@@ -1,0 +1,67 @@
+{% extends "layout.html" %}
+
+{% block head %}
+    {% if session.user_id %}
+        <script src="static/dashboard.js"></script>
+    {% else %}
+    {%endif%}
+
+{% endblock %}
+
+{% block title %}
+    {% if session.user_id %}
+        Dashboard
+    {% else %}
+        Board Game Inventory
+    {%endif%}
+{% endblock %}
+
+{% block main %}
+    {% if session.user_id %}
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-6">
+                <table class="table table-striped" id="hot_table">
+                    <thead class="thead-dark">
+                        <tr>
+                            <th class="text-center" colspan="5"><h2>Hot Boardgames</h2></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr></tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="col-md-6">
+                <table class="table table-striped" id="dash_collection_table">
+                    <thead class="thead-dark">
+                        <tr>
+                            <th class="text-center" colspan="6"><h2>Your Games</h2></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr></tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    {% else %}
+    <div class="container-fluid">
+        <div class="row">
+            <div class="thumbnail text-center">
+                <img src="/static/img/welcome.jpg" class="img-responsive" alt="Welcome"></img>
+                <div class="caption">
+                    <p class="text-welcome">
+                            <strong>Welcome to Board Game Inventory!!!<br></strong>
+                                <button type="button" class="btn btn-success btn-lg" data-toggle="modal" data-target="#registrationForm">Sign up</button>
+                                <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#loginForm">Log in</button>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    {%endif%}
+
+{% endblock %}
