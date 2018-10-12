@@ -88,7 +88,7 @@ $(document).ready(function(){
         ).appendTo('#dash_collection_table');
 
         //Append data from user collection
-        $.getJSON( 'https://board-game-inventory.herokuapp.com/?option=user_collection', function( data ) {
+        $.getJSON( 'https://board-game-inventory.herokuapp.com/collection?option=user_collection', function( data ) {
             if (data["collection"] == "empty"){
                 $('#loading_collection_row').empty();
                 $('<tr>').append(
