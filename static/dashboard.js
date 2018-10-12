@@ -27,7 +27,7 @@ $(document).ready(function(){
         ).appendTo('#hot_table');
 
         //Append data from ajax to #hot_table
-        $.getJSON( "http://127.0.0.1:5000/hot", function dashboard_update( data ) {
+        $.getJSON( "https://board-game-inventory.herokuapp.com/hot", function dashboard_update( data ) {
             $.each( data, function( i, item ) {
                 var thumbnail;
                 if (item.thumbnail == null) {
@@ -88,7 +88,7 @@ $(document).ready(function(){
         ).appendTo('#dash_collection_table');
 
         //Append data from user collection
-        $.getJSON( 'http://127.0.0.1:5000/collection?option=user_collection', function( data ) {
+        $.getJSON( 'https://board-game-inventory.herokuapp.com/?option=user_collection', function( data ) {
             if (data["collection"] == "empty"){
                 $('#loading_collection_row').empty();
                 $('<tr>').append(

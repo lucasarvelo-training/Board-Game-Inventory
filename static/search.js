@@ -19,7 +19,7 @@ $(document).ready(function(){
                     $('<td colspan="5" id="loading_search_row">').html('<img class="img-responsive center-block" id="loading_search_gif" alt="Searching" src="static/img/processing_search_bar.gif">'),
                 ).appendTo('#search_table');
             $('#search_table').removeClass('invisible');
-            $.getJSON( "http://127.0.0.1:5000/search", {q: search_input}, function( data ) {
+            $.getJSON( "https://board-game-inventory.herokuapp.com/search", {q: search_input}, function( data ) {
                 $.each( data, function( i, item ) {
                     var thumbnail, year, rank;
 
